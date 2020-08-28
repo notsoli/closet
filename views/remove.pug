@@ -1,0 +1,12 @@
+extends main
+
+block links
+  link(rel="stylesheet", href="/stylesheets/remove.css")
+
+block content
+  #main
+    form#remove(action="/remove" enctype="multipart/form-data" method="post")
+      div
+        label(for="password") password:
+        input#password(type="password" placeholder="password" name="password" required)
+      input(type="submit" value="remove latest")

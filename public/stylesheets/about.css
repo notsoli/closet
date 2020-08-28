@@ -1,0 +1,10 @@
+/* main */
+
+#main {
+  padding: 30px;
+  max-width: 600px;
+}
+
+#main > div {
+  margin-bottom: 30px;
+}

@@ -1,0 +1,11 @@
+extends main
+include mixins/postCard
+
+block links
+  link(rel="stylesheet", href="/stylesheets/index.css")
+
+block content
+  #main
+    #posts
+      each post in posts
+        +postCard(post)

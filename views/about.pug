@@ -1,0 +1,41 @@
+extends main
+
+block links
+  link(rel="stylesheet", href="/stylesheets/about.css")
+
+block content
+  #main
+    div
+      h1 what is sam's closet?
+      p 
+        | sam's closet is a site i created in order to have an
+        | easy way to display my outfits, both for me and for
+        | others. it allows me to see how my sense has changed
+        | over time, and how often i wear certain items. i
+        | originally intended one of my other projects to fill
+        | this purpose (#[a(href="https://www.hmpg.io") hmpg.io]),
+        | but as the intentions of that site changed, i realized
+        | this would be better as its own project.
+    div
+      h1 how did you make this?
+      p 
+        | i wrote this site using the
+        | #[a(href="https://www.koajs.com") koa framework], with
+        | #[a(href="https://pugjs.org") pug] as a templating engine.
+        | to manage post data, i used
+        | #[a(href="https://www.mongodb.com/") mongoDB]. all css
+        | (and the tiny bit of client-side javascript) is written
+        | without any compilers or frameworks. i tried to make the
+        | site as lightweight and as simple as possible in order to
+        | put more focus on the content.
+    div
+      h1 can i do this too?
+      p
+        | absolutely! the
+        | #[a(href="https://github.com/notsoli/closet") source code]
+        | is available on GitHub, and i strongly encourage others to
+        | tinker with the codebase and host your own version of this
+        | site. i try to make sure my code is readable and
+        | maintainable, so modifying this site should be no problem
+        | for people with basic node.js and web development
+        | knowledge.

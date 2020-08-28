@@ -1,0 +1,168 @@
+/* variables */
+
+:root {
+  --main: #fffcf5;
+  --main-half: rgba(255, 252, 245, 0.7);
+  --text: #000;
+  --neutral: #c7c7c7;
+}
+
+/* main */
+
+* {
+  font-family: monospace;
+}
+
+body {
+  background-color: var(--main);
+}
+
+/* banner */
+
+#banner {
+  display: none;
+}
+
+/* nav */
+
+nav {
+  display: flex;
+  height: 50px;
+  align-items: stretch;
+  position: sticky;
+  top: 0;
+  background-color: var(--main);
+  user-select: none;
+}
+
+/* nav logo */
+
+#nav-logo {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text);
+  margin-left: 50px;
+  flex-grow: 1;
+}
+
+#nav-logo img {
+  width: 60px;
+  padding: 0 10px;
+}
+
+#nav-logo p {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+/* nav item */
+
+.nav-item {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+/* nav submenu */
+
+#submenu-icon {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+#nav-submenu {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  background-color: var(--main);
+}
+
+/* submenu item */
+
+.submenu-item {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--text);
+  font-weight: normal;
+}
+
+#submenu-icon:hover > p {
+  transform: rotate(180deg);
+}
+
+#submenu-icon:hover #nav-submenu {
+  display: flex;
+}
+
+/* nav underline */
+
+.nav-item:hover, .submenu-item:hover {
+  text-decoration: underline;
+}
+
+/* desktop formatting */
+@media only screen and (min-width: 1224px) {
+  /* nav logo */
+
+  #nav-logo img {
+    transform-origin: 50% 20%;
+    transition: transform 0.2s;
+  }
+
+  #nav-logo:hover img {
+    transform: rotate(-10deg);
+    transform-origin: 50% 20%;
+    transition: transform 0.2s;
+  }
+}
+
+/* tablet formatting */
+@media only screen and (min-width: 600px) {
+  /* nav logo */
+
+  #nav-logo {
+    flex-grow: 0;
+    margin: 0 50px 0 0;
+  }
+
+  /* nav item */
+
+  .nav-item {
+    display: flex;
+  }
+
+  #submenu-icon {
+    display: none;
+  }
+}
+
+/* tiny screen formatting */
+@media only screen and (max-width: 344px) {
+  /* nav logo */
+
+  #nav-logo img {
+    width: 50px;
+  }
+
+  #nav-logo p {
+    font-size: 16px;
+  }
+}

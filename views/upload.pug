@@ -1,0 +1,42 @@
+extends main
+
+block links
+  link(rel="stylesheet", href="/stylesheets/upload.css")
+  script(src="/scripts/upload.js")
+
+block content
+  #main
+    form#upload(action="/upload" enctype="multipart/form-data" method="post")
+      div
+        label(for="password") password:
+        input#password(type="password" placeholder="password" name="password" required)
+      div
+        label(for="image") image:
+        input#image(type="file" name="image" required)
+      div
+        label(for="date") upload date
+        input#date(type="date" name="date" required)
+      div
+        label(for="description") description
+        textarea#description(name="description" rows=3 required)
+      #items
+        label items:
+        #item-section
+          .item
+            input.type(type="text" name="type" value="shirt" placeholder="name" required)
+            input.value(type="text" name="value" placeholder="value" required)
+            button(type="button").remove -
+          .item
+            input.type(type="text" name="type" value="pants" placeholder="name" required)
+            input.value(type="text" name="value" placeholder="value" required)
+            button(type="button").remove -
+          .item
+            input.type(type="text" name="type" value="shoes" placeholder="name" required)
+            input.value(type="text" name="value" placeholder="value" required)
+            button(type="button").remove -
+        button(type="button")#add add item
+      input(type="submit" value="submit")
+    #item.item
+      input.type(type="text" name="type" placeholder="name" required)
+      input.value(type="text" name="value" placeholder="value" required)
+      button(type="button").remove -

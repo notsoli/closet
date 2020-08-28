@@ -1,0 +1,14 @@
+mixin postCard(post)
+  a.post-card(href="/i/" + post.link)
+    img.post-image(
+      src="/images/preview/" + post.id + ".jpg"
+      alt="post " + post.id)
+    .post-info
+      .post-date #{post.date.getMonth()+1}/
+        | #{post.date.getDate()}/#{post.date.getFullYear()}
+      .post-descroption= post.description
+    .post-items
+      ul
+        each val, key in post.items
+          li #{key}: #{val} 
+

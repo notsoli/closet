@@ -1,0 +1,38 @@
+extends main
+include mixins/postCard
+
+block links
+  link(rel="stylesheet", href="/stylesheets/individual.css")
+
+block content
+  #main
+    #post
+      #post-content
+        #post-nav
+          a(href="/i/" + previousLink) < previous post
+          p #{post.date.getMonth()+1}/
+              | #{post.date.getDate()}/#{post.date.getFullYear()}
+          a(href="/i/" + nextLink) next post >
+        img#post-image(
+          src="/images/full/" + post.id + ".jpg"
+          alt="post " + post.id)
+      #other
+        #post-info
+          #post-description= post.description
+          #post-items
+            ul
+              each val, key in post.items
+                li #{key}: #{val} 
+        #other-posts
+          if previous.length > 0
+            .preview-section
+              p previous posts
+              .preview-posts
+                each post in previous
+                  +postCard(post)
+          if next.length > 0
+            .preview-section
+              p next posts
+              .preview-posts
+                each post in next
+                  +postCard(post)

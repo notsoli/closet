@@ -1,0 +1,22 @@
+/* main */
+
+body {
+  background-color: #fffcf5;
+  padding: 30px;
+  font-family: monospace;
+}
+
+/* error message */
+
+h1 {
+  font-size: 40px;
+}
+
+p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #000;
+}

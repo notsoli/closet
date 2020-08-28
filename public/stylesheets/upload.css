@@ -1,0 +1,92 @@
+/* main */
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* upload */
+
+#upload {
+  max-width: calc(100% - 60px);
+  margin: 30px;
+  padding: 30px;
+  border: 3px solid var(--text);
+  border-radius: 10px;
+}
+
+#upload > div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+/* choose file */
+
+#image {
+  width: 100%;
+}
+
+#image::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+#image::before {
+  content: 'choose image';
+  display: inline-block;
+  border: 1px solid rgb(118, 118, 118);
+  border-radius: 3px;
+  padding: 1px 5px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-size: 10pt;
+}
+
+/* description */
+
+#description {
+  width: 100%;
+  resize: none;
+}
+
+/* item */
+
+.item {
+  display: flex;
+  width: 100%;
+}
+
+.item > * {
+  margin-bottom: 10px;
+}
+
+.type {
+  width: 30%;
+  margin-right: 10px
+}
+
+.value {
+  width: calc(70% - 45px);
+}
+
+.remove {
+  width: 25px;
+  margin-left: 10px;
+}
+
+#item {
+  display: none;
+}
