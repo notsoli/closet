@@ -16,7 +16,8 @@ async function uploadImage(ctx, id) {
   const stream = fs.createWriteStream(temp)
   
   // transfer file
-  reader.pipe(stream)
+  await new Promise(resolve => 
+    reader.pipe(stream).on('finish', resolve))
 
   // read image from temp
   const image = await jimp.read(temp)
