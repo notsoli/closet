@@ -3,7 +3,7 @@
 body {
   background-color: #fffcf5;
   padding: 30px;
-  font-family: monospace;
+  font-family: Courier, Consolas, monospace;
 }
 
 /* error message */
