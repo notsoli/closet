@@ -3,6 +3,12 @@ include mixins/postCard
 
 block links
   link(rel="stylesheet", href="/stylesheets/individual.css")
+  meta(property="og:title" content="Sam's Closet - Post")
+  meta(property="og:description" content=post.description)
+  meta(property="og:type" content="article")
+  meta(property="og:url" content="https://closet.samranda.com/i/" + post.link)
+  meta(property="og:image" content="https://closet.samranda.com/i/full/" + post.id + ".jpg")
+  meta(property="og:image:alt" content="Post " + post.id + ".")
 
 block content
   #main
